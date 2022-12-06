@@ -2,10 +2,12 @@ const path = require("path");
 const HtmlPlugin = require("html-webpack-plugin");
 
 const commonConfig = {
-  entry: "./src/index.tsx",
+  entry: {
+    bundle: "./src/index.tsx",
+  },
   output: {
     path: path.join(__dirname, "/dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
   },
   module: {
     rules: [
@@ -23,6 +25,17 @@ const commonConfig = {
   ],
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: "all",
+          name: "vendor",
+          enforce: true,
+        },
+      },
+    },
   },
 };
 

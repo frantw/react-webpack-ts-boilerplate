@@ -5,6 +5,7 @@ module.exports = {
   ...commonConfig,
   mode: "production",
   optimization: {
+    ...commonConfig.optimization,
     minimize: true,
     minimizer: [
       new TerserPlugin({

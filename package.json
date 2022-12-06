@@ -2,7 +2,7 @@
   "name": "date-picker",
   "version": "1.0.0",
   "description": "A date-picker & calendar simple implement project",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "webpack serve --config=./webpack.dev.config.js",
     "build": "webpack --config=./webpack.prod.config.js"
