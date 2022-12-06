@@ -1,7 +1,7 @@
 {
-  "name": "date-picker",
+  "name": "react-webpack-ts-boilerplate",
   "version": "1.0.0",
-  "description": "A date-picker & calendar simple implement project",
+  "description": "A simple boilerplate project for creating web applications using React, Webpack & TypeScript",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "webpack serve --config=./webpack.dev.config.js",
