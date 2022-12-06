@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlPlugin = require("html-webpack-plugin");
+const CreateStyledComponentsTransformer =
+  require("typescript-plugin-styled-components").default;
+const StyledComponentsTransformer = CreateStyledComponentsTransformer();
 
 const commonConfig = {
   entry: {
@@ -14,7 +17,12 @@ const commonConfig = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: "ts-loader",
+        loader: "ts-loader",
+        options: {
+          getCustomTransformers: () => ({
+            before: [StyledComponentsTransformer],
+          }),
+        },
       },
     ],
   },
