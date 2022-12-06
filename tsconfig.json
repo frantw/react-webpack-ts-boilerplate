@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "es5"
+  },
+  "exclude": ["node_modules", "dist"]
+}
