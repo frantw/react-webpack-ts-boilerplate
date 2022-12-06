@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlPlugin = require("html-webpack-plugin");
 
-module.exports = {
+const commonConfig = {
   entry: "./src/index.tsx",
   output: {
     path: path.join(__dirname, "/dist"),
@@ -25,3 +25,5 @@ module.exports = {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
 };
+
+module.exports = commonConfig;
